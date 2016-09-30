@@ -1,14 +1,14 @@
-module tb_4bit_addr;
+module tb_fouradder;
 	reg [3:0] a,b;
 	reg cin; 
 	wire [3:0] s;
 	wire cout;
 	
-	fouraddr UUT(.S(s), .Cout(cout), .A(a), .B(b), .Cin(cin));
+	fouradder UUT(.S(s), .Cout(cout), .A(a), .B(b), .Cin(cin));
 	
 	initial
 		begin
-			$dumpfile("Ex1b.vpd");
+			$dumpfile("fouradder.vpd");
 			$dumpvars;
 			
 			a[3]=0; a[2]=0; a[1]=0; a[0]=1; 

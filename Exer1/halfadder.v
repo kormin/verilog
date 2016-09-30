@@ -1,4 +1,5 @@
-module haddr (S, C, x, y);
+// iverilog halfadder halfadder.v
+module halfadder (S, C, x, y);
 	input x,y;
 	output S, C;
 	

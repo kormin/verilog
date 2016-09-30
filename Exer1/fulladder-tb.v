@@ -1,10 +1,10 @@
-module tb_faddr;
+module tb_fulladder;
 	reg a,b,c;
 	wire d,e;
 	faddr UUT(.S(d), .C(e), .X(a), .Y(b), .Z(c));
 	initial
 		begin
-			$dumpfile("Ex1a.vpd");
+			$dumpfile("fulladder.vpd");
 			$dumpvars;
 			a=0; b=0; c=0;
 			#10

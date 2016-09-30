@@ -1,4 +1,5 @@
-module faddr(S,C,X,Y,Z);
+// iverilog fulladder fulladder.v fulladder-tb.v
+module fulladder(S,C,X,Y,Z);
 	input X, Y, Z;
 	output S, C;
 	wire w1, w2, w3, w4;

@@ -1,4 +1,4 @@
-module fourbcd_tb;
+module tb_fourbcd;
 	reg [3:0] a, b;
 	wire [7:0] c;
 	
@@ -6,7 +6,7 @@ module fourbcd_tb;
 	
 	initial
 		begin
-			$dumpfile("Ex1d.vpd");
+			$dumpfile("fourbcd.vpd");
 			$dumpvars;
 			
 			a = 4'd0;

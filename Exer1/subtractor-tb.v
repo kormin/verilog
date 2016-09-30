@@ -1,4 +1,4 @@
-module tb_subt;
+module tb_subtractor;
 	reg [3:0] a,b;
 	wire [3:0] d;
 	wire bout;
@@ -7,7 +7,7 @@ module tb_subt;
 	
 	initial
 		begin
-			$dumpfile("Ex1c.vpd");
+			$dumpfile("subtractor.vpd");
 			$dumpvars;
 			
 			a[3]=0; a[2]=0; a[1]=0; a[0]=1; 
