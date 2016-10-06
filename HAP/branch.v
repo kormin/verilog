@@ -18,7 +18,7 @@ iverilog -o brn branch.v branch-tb.v
 vvp brn
 gtkwave branch.vpd
  */
-module branch (data, PC, NPC);
+module branch (data, NPC, PC);
 	input [15:0] data;
 	input NPC;
 	output PC;
