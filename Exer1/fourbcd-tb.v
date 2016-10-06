@@ -1,4 +1,12 @@
-module tb_fourbcd;
+/*
+ * Exercise: 1
+ * Description: 4 bit bcd test bench
+ * Script:
+iverilog fourbcd fourbcd.v fourbcd-tb.v halfadder.v fulladder.v
+vvp fourbcd
+gtkwave fourbcd.vpd
+ */
+ module tb_fourbcd;
 	reg [3:0] a, b;
 	wire [7:0] c;
 	

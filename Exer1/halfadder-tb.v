@@ -1,3 +1,11 @@
+/*
+ * Exercise: 1
+ * Description: half adder test bench
+ * Script:
+iverilog halfadder halfadder.v halfadder-tb.v
+vvp halfadder
+gtkwave halfadder.vpd
+ */
 module tb_halfadder;
 	reg a,b;
 	wire d,e;

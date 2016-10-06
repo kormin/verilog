@@ -1,4 +1,12 @@
-module tb_subtractor;
+/*
+ * Exercise: 1
+ * Description: subtractor test bench
+ * Script:
+iverilog subtractor subtractor.v subtractor-tb.v fouradder.v fulladder.v
+vvp subtractor
+gtkwave subtractor.vpd
+ */
+ module tb_subtractor;
 	reg [3:0] a,b;
 	wire [3:0] d;
 	wire bout;

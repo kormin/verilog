@@ -1,3 +1,11 @@
+/*
+ * Exercise: 1
+ * Description: full adder test bench
+ * Script:
+iverilog fulladder fulladder.v fulladder-tb.v
+vvp fulladder
+gtkwave fulladder.vpd
+ */
 module tb_fulladder;
 	reg a,b,c;
 	wire d,e;

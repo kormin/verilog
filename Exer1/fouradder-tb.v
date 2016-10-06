@@ -1,4 +1,12 @@
-module tb_fouradder;
+/*
+ * Exercise: 1
+ * Description: 4 bit adder test bench
+ * Script:
+iverilog fouradder fouradder.v fouradder-tb.v fulladder.v
+vvp fouradder
+gtkwave fouradder.vpd
+ */
+ module tb_fouradder;
 	reg [3:0] a,b;
 	reg cin; 
 	wire [3:0] s;
