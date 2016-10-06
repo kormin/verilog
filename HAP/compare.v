@@ -2,7 +2,7 @@
  * Project: Harvard Architecture Processor
  * Module: Compare Instruction
  * Script:
-iverilog cmp compare.v compare-tb.v
+iverilog -o cmp compare.v compare-tb.v
 vvp cmp
 gtkwave compare.vpd
  */
@@ -22,43 +22,43 @@ module compare (RD, opcode, R1, R2);
 	parameter NE  = 5'b10000;
 	
 	reg [2:0] RD;
-	always @ (opcode) begin
+	always @ (opcode or R1 or R2) begin
 		case(opcode)
 			LT: begin
 				if(R1 < R2)
-					Rd <= Yes;
+					RD <= Yes;
 				else
-					Rd <= No;
+					RD <= No;
 			end
 			GT: begin
 				if(R1 > R2)
-					Rd <= Yes;
+					RD <= Yes;
 				else
-					Rd <= No;
+					RD <= No;
 			end
 			EQ: begin
 				if(R1 == R2)
-					Rd <= Yes;
+					RD <= Yes;
 				else
-					Rd <= No;
+					RD <= No;
 			end
 			GTE: begin
 				if(R1 >= R2)
-					Rd <= Yes;
+					RD <= Yes;
 				else
-					Rd <= No;
+					RD <= No;
 			end
 			LTE: begin
 				if(R1 <= R2)
-					Rd <= Yes;
+					RD <= Yes;
 				else
-					Rd <= No;
+					RD <= No;
 			end
 			NE: begin
 				if(R1 != R2)
-					Rd <= Yes;
+					RD <= Yes;
 				else
-					Rd <= No;
+					RD <= No;
 			end
 			default: RD <= No;
 		endcase

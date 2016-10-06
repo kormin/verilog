@@ -2,7 +2,7 @@
  * Exercise: 1
  * Description: 4 bit bcd
  * Script:
-iverilog fourbcd fourbcd.v fourbcd-tb.v halfadder.v fulladder.v
+iverilog -o fourbcd fourbcd.v fourbcd-tb.v halfadder.v fulladder.v
 vvp fourbcd
 gtkwave fourbcd.vpd
  */

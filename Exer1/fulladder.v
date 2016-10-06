@@ -2,7 +2,7 @@
  * Exercise: 1
  * Description: full adder
  * Script:
-iverilog fulladder fulladder.v fulladder-tb.v
+iverilog -o fulladder fulladder.v fulladder-tb.v
 vvp fulladder
 gtkwave fulladder.vpd
  */

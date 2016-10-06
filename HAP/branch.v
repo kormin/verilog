@@ -14,7 +14,7 @@
  * 222 = register 2 (R2)
  * MMMM - MMMM = 8-bit Memory Address
  * Script:
-iverilog brn branch.v branch-tb.v
+iverilog -o brn branch.v branch-tb.v
 vvp brn
 gtkwave branch.vpd
  */

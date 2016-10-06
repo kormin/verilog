@@ -2,7 +2,7 @@
  * Exercise: 1
  * Description: half adder test bench
  * Script:
-iverilog halfadder halfadder.v halfadder-tb.v
+iverilog -o halfadder halfadder.v halfadder-tb.v
 vvp halfadder
 gtkwave halfadder.vpd
  */

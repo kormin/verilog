@@ -2,7 +2,7 @@
  * Exercise: 2
  * Description: 4 bit comparator
  * Script:
-iverilog comparator comparator.v comparator-tb.v
+iverilog -o comparator comparator.v comparator-tb.v
 vvp comparator
 gtkwave comparator.vpd
  */

@@ -2,19 +2,20 @@
  * Project: Harvard Architecture Processor
  * Module: Compare Instruction
  * Script:
-iverilog cmp compare.v compare-tb.v
+iverilog -o cmp compare.v compare-tb.v
 vvp cmp
 gtkwave compare.vpd
  */
- module compare-tb;
+ module tb_compare;
+	reg clk;
 	reg [4:0] opcode;
 	reg [2:0] R1, R2;
 	wire [2:0] RD;
 	
 	compare UUT (RD, opcode, R1, R2);
 	
-	initial Clk = 0; 
-    always #2 Clk = ~Clk;
+	initial clk = 0; 
+    always #2 clk = ~clk;
 	
 	initial
 	begin
@@ -87,8 +88,8 @@ gtkwave compare.vpd
 			#5
 			// LTE
 			opcode = 5'b01111;
-			R1 = 3'd2;
-			R2 = 3'd7;
+			R1 = 3'd7;
+			R2 = 3'd3;
 			#5
 			// NE
 			opcode = 5'b10000;

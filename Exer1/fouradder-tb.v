@@ -2,7 +2,7 @@
  * Exercise: 1
  * Description: 4 bit adder test bench
  * Script:
-iverilog fouradder fouradder.v fouradder-tb.v fulladder.v
+iverilog -o fouradder fouradder.v fouradder-tb.v fulladder.v
 vvp fouradder
 gtkwave fouradder.vpd
  */

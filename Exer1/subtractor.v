@@ -2,7 +2,7 @@
  * Exercise: 1
  * Description: subtractor
  * Script:
-iverilog subtractor subtractor.v subtractor-tb.v fouradder.v fulladder.v
+iverilog -o subtractor subtractor.v subtractor-tb.v fouradder.v fulladder.v
 vvp subtractor
 gtkwave subtractor.vpd
  */

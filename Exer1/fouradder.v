@@ -2,7 +2,7 @@
  * Exercise: 1
  * Description: 4 bit adder
  * Script:
-iverilog fouradder fouradder.v fouradder-tb.v fulladder.v
+iverilog -o fouradder fouradder.v fouradder-tb.v fulladder.v
 vvp fouradder
 gtkwave fouradder.vpd
  */
