@@ -8,5 +8,5 @@
 !*.*
 # End ignore for no file extensions
 
-# Ignore vpd files
+# Ignore vpd
 *.vpd
