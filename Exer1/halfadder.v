@@ -7,7 +7,7 @@ vvp halfadder
 gtkwave halfadder.vpd
  */
 module halfadder (S, C, x, y);
-	input x,y;
+	input x, y;
 	output S, C;
 	
 	xor X1(S, x, y);
