@@ -21,38 +21,45 @@ module compare (RD, opcode, R1, R2);
 	parameter LTE = 5'b01111;
 	parameter NE  = 5'b10000;
 	
+	reg [2:0] RD;
 	always @ (opcode) begin
 		case(opcode)
-			LT: 
+			LT: begin
 				if(R1 < R2)
 					Rd <= Yes;
 				else
 					Rd <= No;
-			GT: 
+			end
+			GT: begin
 				if(R1 > R2)
 					Rd <= Yes;
 				else
 					Rd <= No;
-			EQ: 
+			end
+			EQ: begin
 				if(R1 == R2)
 					Rd <= Yes;
 				else
 					Rd <= No;
-			GTE: 
+			end
+			GTE: begin
 				if(R1 >= R2)
 					Rd <= Yes;
 				else
 					Rd <= No;
-			LTE: 
+			end
+			LTE: begin
 				if(R1 <= R2)
 					Rd <= Yes;
 				else
 					Rd <= No;
-			NE: 
+			end
+			NE: begin
 				if(R1 != R2)
 					Rd <= Yes;
 				else
 					Rd <= No;
+			end
 			default: RD <= No;
 		endcase
 	end
