@@ -1,4 +1,11 @@
-// iverilog fourbcd fourbcd.v fourbcd-tb.v halfadder.v fulladder.v
+/*
+ * Exercise: 1
+ * Description: 4 bit bcd
+ * Script:
+iverilog fourbcd fourbcd.v fourbcd-tb.v halfadder.v fulladder.v
+vvp fourbcd
+gtkwave fourbcd.vpd
+ */
 module fourbcd (S, A, B);
 	input [3:0] A,B;
 	output [7:0] S;

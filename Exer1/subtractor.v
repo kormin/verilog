@@ -1,4 +1,11 @@
-// iverilog subtractor subtractor.v subtractor-tb.v fouradder.v fulladder.v
+/*
+ * Exercise: 1
+ * Description: subtractor
+ * Script:
+iverilog subtractor subtractor.v subtractor-tb.v fouradder.v fulladder.v
+vvp subtractor
+gtkwave subtractor.vpd
+ */
 module subtractor (D, Bout, A, B);
 	input [3:0] A,B;
 	output [3:0] D;

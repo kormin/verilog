@@ -1,4 +1,11 @@
-// iverilog fulladder fulladder.v fulladder-tb.v
+/*
+ * Exercise: 1
+ * Description: full adder
+ * Script:
+iverilog fulladder fulladder.v fulladder-tb.v
+vvp fulladder
+gtkwave fulladder.vpd
+ */
 module fulladder(S,C,X,Y,Z);
 	input X, Y, Z;
 	output S, C;

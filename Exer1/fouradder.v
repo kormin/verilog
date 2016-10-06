@@ -1,4 +1,11 @@
-// iverilog fouradder fouradder.v fouradder-tb.v fulladder.v
+/*
+ * Exercise: 1
+ * Description: 4 bit adder
+ * Script:
+iverilog fouradder fouradder.v fouradder-tb.v fulladder.v
+vvp fouradder
+gtkwave fouradder.vpd
+ */
 module fouradder (S, Cout, A, B, Cin);
 	input [3:0] A,B;
 	input Cin;

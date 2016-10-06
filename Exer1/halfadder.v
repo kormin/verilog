@@ -1,4 +1,11 @@
-// iverilog halfadder halfadder.v
+/*
+ * Exercise: 1
+ * Description: half adder
+ * Script:
+iverilog halfadder halfadder.v halfadder-tb.v
+vvp halfadder
+gtkwave halfadder.vpd
+ */
 module halfadder (S, C, x, y);
 	input x,y;
 	output S, C;
