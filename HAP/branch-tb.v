@@ -1,18 +1,19 @@
 /*
  * Project: Harvard Architecture Processor
  * Module: Branch Instruction
- * Format: 
- OOOO - O111 - MMMM - MMMM
- OOOO - O111 - MMMM - MMMM
- OOOO - O111 - xxxx - x222
- OOOO - O111 - xxxx - x222
- OOOO - Oxxx - MMMM - MMMM
- OOOO - Oxxx - xxxx - x111
- * Legend: 
- * OOOOO = 5-bit Opcode
- * 111 = register 1 (R1)
- * 222 = register 2 (R2)
- * MMMM - MMMM = 8-bit Memory Address
+Format: 
+OOOO - O111 - MMMM - MMMM
+OOOO - O111 - MMMM - MMMM
+OOOO - O111 - xxxx - x222
+OOOO - O111 - xxxx - x222
+OOOO - Oxxx - MMMM - MMMM
+OOOO - Oxxx - xxxx - x111
+Legend: 
+OOOOO = 5-bit Opcode
+111 = register 1 (R1)
+222 = register 2 (R2)
+MMMM - MMMM = 8-bit Memory Address
+x - Don't care
  * Script:
 iverilog -o brn branch.v branch-tb.v
 vvp brn

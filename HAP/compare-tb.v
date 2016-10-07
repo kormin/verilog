@@ -7,15 +7,15 @@ vvp cmp
 gtkwave compare.vpd
  */
  module tb_compare;
-	reg clk;
+	// reg clk;
 	reg [4:0] opcode;
 	reg [2:0] R1, R2;
 	wire [2:0] RD;
 	
 	compare UUT (RD, opcode, R1, R2);
 	
-	initial clk = 0; 
-    always #2 clk = ~clk;
+	// initial clk = 0; 
+    // always #2 clk = ~clk;
 	
 	initial
 	begin
