@@ -1,3 +1,11 @@
+/*
+ * Exercise: 2
+ * Description: Multiplexer 4 to 1
+ * Script:
+iverilog -o mux mux.v mux-tb.v
+vvp mux
+gtkwave mux.vpd
+ */
 module mux41 (Y,A,B,C,D,S);
 	input [3:0] A, B, C, D;
 	input [1:0] S;
