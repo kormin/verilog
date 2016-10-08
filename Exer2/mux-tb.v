@@ -1,4 +1,12 @@
-module tb_mult1;
+/*
+ * Exercise: 2
+ * Description: Multiplexer 4 to 1
+ * Script:
+iverilog -o mux mux.v mux-tb.v
+vvp mux
+gtkwave mux.vpd
+ */
+ module tb_mult1;
 	reg [3:0] a, b, c, d;
 	reg [1:0] s;
 	wire [3:0] y;
