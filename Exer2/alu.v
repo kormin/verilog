@@ -1,4 +1,11 @@
-// iverilog -o Ex2c Ex2c.v Ex2b.v Ex2a.v Ex1a.v Ex1b.v Ex1c.v Ex2c-tb.v
+/*
+ * Exercise: 2
+ * Description: 4 bit ALU
+ * Script:
+iverilog -o alu alu.v mux.v comparator.v fulladder.v fouradder.v subtractor.v alu-tb.v
+vvp alu
+gtkwave alu.vpd
+ */
 module alu4 (Res,Of,A,B,Cin,Mode);
 	input [3:0] A, B;
 	input Cin;
@@ -26,44 +33,4 @@ module alu4 (Res,Of,A,B,Cin,Mode);
 	mux41    m3(Res, temp_mux1, temp_mux2, temp_mux1, temp_mux2, {1'b0, Mode[2]});
 	assign temp_s = (Mode[2]| Mode[1]);
 	assign Of = (Mode==1'd0) ? temp_out[0] : ( (Mode==1'd1) ? temp_out[1] : 1'bZ);
-	// module mux41 (Y,A,B,C,D,S);
-	// input [3:0] A, B, C, D;
-	// input [1:0] S;
-	// output [3:0] Y;
-	//mux41    m4(Of, {3'b000,temp_out[0]}, {3'b000,temp_out[1]}, {4'b0000}, {4'b0000}, {Mode[0], temp_s});
-	// mux41 		m4(Of, {4'b0000}, {4'b0000}, {3'b000,temp_out[1]}, {3'b000,temp_out[0]}, {temp_s, Mode[0]});
-	/*always @ (*)
-	begin
-		case (Mode)
-			3'b000 : 
-				begin
-					fouraddr f1(Res, Of, A, B, Cin);
-				end
-			3'b001 : subt s1(Res, Of, A, B);
-			3'b010 : 
-				begin
-					assign Of = Z;
-					comp4 c1(Res, A, B);
-				end
-			3'b011 : 
-				begin
-					assign Of = Z;
-					assign Res = A && B;
-				end
-			3'b100 : 
-				begin
-					assign Of = Z;
-					assign Res = A || B;
-				end
-			3'b101 : 
-				begin
-					assign Of = Z;
-					assign Res = ~A;
-				end
-			3'b110 : fouraddr f2(Res, Of, A, 1, 0);
-			3'b111 : subt s2(Res, Of, A, 1);
-		endcase
-	end
-	*/
-	// assign Res = S[2] ? ( s[1] ? ( s[0] ? subt S0 ) : () ) : ();
 endmodule
