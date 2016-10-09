@@ -1,3 +1,11 @@
+/*
+ * Exercise: 2
+ * Description: 4 bit ALU
+ * Script:
+iverilog -o alu alu.v mux.v comparator.v fulladder.v fouradder.v subtractor.v alu-tb.v
+vvp alu
+gtkwave alu.vpd
+ */
 module tb_alu4;
 	reg	[3:0] a, b;
 	reg	[2:0] m;
