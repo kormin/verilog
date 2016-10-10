@@ -1,3 +1,11 @@
+/*
+ * Exercise: 3
+ * Description: 4 bit comparator in always block
+ * Script:
+iverilog -o comparator comparator.v comparator-tb.v
+vvp comparator
+gtkwave comparator.vpd
+ */
 module tb_comp4;
 	reg [3:0] a, b;
 	wire [3:0] r;
