@@ -1,4 +1,11 @@
-// iverilog -o Ex3a Ex3a.v Ex3a-tb.v
+/*
+ * Exercise: 3
+ * Description: 4 bit comparator in always block
+ * Script:
+iverilog -o comparator comparator.v comparator-tb.v
+vvp comparator
+gtkwave comparator.vpd
+ */
 module comp4 (R,A,B);
 	input [3:0] A, B;
 	output [3:0] R;
