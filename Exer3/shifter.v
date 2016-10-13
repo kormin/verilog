@@ -1,4 +1,11 @@
-// iverilog -o Ex3b Ex3b.v Ex3b-tb.v
+/*
+ * Exercise: 3
+ * Description: shifter
+ * Script:
+iverilog -o shifter shifter.v shifter-tb.v
+vvp shifter
+gtkwave shifter.vpd
+ */
 module shifter(R, A, Mode);
 	input [3:0] A;
 	input [2:0] Mode;
