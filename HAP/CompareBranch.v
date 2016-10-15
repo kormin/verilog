@@ -3,9 +3,9 @@
  * Project: Harvard Architecture Processor
  * Module: Compare and Branching Instruction
  * Script:
-iverilog -o cmp compare.v compare-tb.v
-vvp cmp
-gtkwave compare.vpd
+iverilog -o cmpBrnch cmpBrnch.v cmpBrnch-tb.v
+vvp cmpBrnch
+gtkwave cmpBrnch.vpd
  */
 module cmpBrnch (out, R1, R2, mode)
 	input [7:0] R1, R2;
