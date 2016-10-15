@@ -3,11 +3,11 @@
  * Project: Harvard Architecture Processor
  * Module: Compare and Branching Instruction
  * Script:
-iverilog -o cmpBrnch cmpBrnch.v cmpBrnch-tb.v
+iverilog -o cmpBrnch CompareBranch.v CompareBranch-tb.v
 vvp cmpBrnch
 gtkwave cmpBrnch.vpd
  */
-module cmpBrnch (out, R1, R2, mode)
+module cmpBrnch (out, mode, R1, R2);
 	input [7:0] R1, R2;
 	input [2:0] mode;
 	output [7:0] out;
@@ -21,15 +21,15 @@ module cmpBrnch (out, R1, R2, mode)
 	parameter GTE  = 3'b011;
 	parameter LTE  = 3'b100;
 	parameter NE   = 3'b101;
-	parameter BNE  = 3'b111;
 	parameter BE   = 3'b110;
-	parameter BNER = 3'b111;
 	parameter BER  = 3'b110;
-	parameter J    = 3'b;
-	parameter JR   = 3'b;
+	parameter BNE  = 3'b111;
+	parameter BNER = 3'b111;
+	// parameter J    = 3'b;
+	// parameter JR   = 3'b;
 	
 	reg [7:0] out;
-	always @ (*) begin
+	always @ (mode or R1 or R2) begin
 		out [7:1] <= 6'd0;
 		case(mode)
 			// Compare
@@ -40,10 +40,10 @@ module cmpBrnch (out, R1, R2, mode)
 			LTE  : out [0] <= (R1 <= R2) ? Yes : No;
 			NE   : out [0] <= (R1 != R2) ? Yes : No;
 			// Branching
-			BNE  : out [0] <= (R1 != AllNo) ? Yes : No;
 			BE   : out [0] <= (R1 == AllNo) ? Yes : No;
-			BNER : out [0] <= (R1 != AllNo) ? Yes : No;
 			BER  : out [0] <= (R1 == AllNo) ? Yes : No;
+			BNE  : out [0] <= (R1 != AllNo) ? Yes : No;
+			BNER : out [0] <= (R1 != AllNo) ? Yes : No;
 			// J    : out [0] <= Yes;
 			// JR   : out [0] <= R1;
 			// default: out [0] <= No;
