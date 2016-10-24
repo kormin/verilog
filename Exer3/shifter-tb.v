@@ -1,3 +1,11 @@
+/*
+ * Exercise: 3
+ * Description: shifter
+ * Script:
+iverilog -o shifter shifter.v shifter-tb.v
+vvp shifter
+gtkwave shifter.vpd
+ */
 module tb_shifter;
 	reg	[3:0] a;
 	reg	[2:0] m;
