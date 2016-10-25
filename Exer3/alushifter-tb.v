@@ -1,3 +1,14 @@
+/*
+ * Exercise: 3
+ * Description: ALU Shifter
+ * Comments:
+ Uses Exer1, Exer2 and Exer3
+ comp4.v in Exer2
+ * Script:
+iverilog -o alushifter faddr.v fouraddr.v subt.v comp4.v mux41.v alu4.v shifter.v alushifter.v alushifter-tb.v
+vvp alushifter
+gtkwave alushifter.vpd
+ */
 module tb_alushifter4;
 	reg	[3:0] a, b, m;
 	reg cin;
