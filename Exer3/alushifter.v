@@ -1,4 +1,12 @@
-// iverilog -o Ex3c Ex2c.v Ex2b.v Ex2a.v Ex1a.v Ex1b.v Ex1c.v Ex3b.v Ex3c.v Ex3c-tb.v
+/*
+ * Exercise: 3
+ * Description: ALU Shifter
+ * Script:
+iverilog -o alushifter alushifter.v alushifter-tb.v
+iverilog -o alushifter Ex2c.v Ex2b.v Ex2a.v Ex1a.v Ex1b.v Ex1c.v shifter.v alushifter.v alushifter-tb.v
+vvp alushifter
+gtkwave alushifter.vpd
+ */
 module alushifter (Res,Of,A,B,Cin,Mode);
 	input [3:0] A, B;
 	input Cin;
