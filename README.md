@@ -28,7 +28,12 @@ Exer2
  -> Ex2c	- alu
  -> Ex2c-tb	- alu-tb
 Exer3  
- -> 
+ -> Ex3a	- comparator
+ -> Ex3a-tb	- comparator-tb
+ -> Ex3b	- shifter
+ -> Ex3b-tb	- shifter-tb
+ -> Ex3c	- alushifter
+ -> Ex3c-tb	- alushifter-tb
 HAP - Harvard Architecture Processor  
  -> 
 
