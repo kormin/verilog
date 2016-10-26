@@ -35,5 +35,10 @@ Exer3
  -> Ex3c	- alushifter
  -> Ex3c-tb	- alushifter-tb
 HAP - Harvard Architecture Processor  
- -> 
+ -> branch				- branch
+ -> branch-tb			- tb_branch
+ -> compare				- compare
+ -> compare-tb			- tb_compare
+ -> CompareBranch		- cmpBrnch
+ -> CompareBranch-tb	- tb_cmpBrnch
 
