@@ -21,7 +21,12 @@ Exer1
  -> Ex1d	- fourbcd
  -> Ex1d-tb	- fourbcd-tb
 Exer2  
- -> 
+ -> Ex2a	- comparator
+ -> Ex2a-tb	- comparator-tb
+ -> Ex2b	- mux
+ -> Ex2b-tb	- mux-tb
+ -> Ex2c	- alu
+ -> Ex2c-tb	- alu-tb
 Exer3  
  -> 
 HAP - Harvard Architecture Processor  
