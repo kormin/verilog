@@ -13,7 +13,7 @@ module tb_mult1;
 	mux41 UUT(y,a,b,c,d,s);
 	initial
 		begin
-			$dumpfile("Ex2b.vpd");
+			$dumpfile("mux.vpd");
 			$dumpvars;
 			s= 2'b00;
 			a= 4'b1111;
