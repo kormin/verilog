@@ -1,4 +1,12 @@
-// iverilog -o Ex4a Ex4a.v Ex4a-tb.v
+/*
+ * Exercise: 4
+ * Description: Program Counter
+ * Comments:
+ * Script:
+iverilog -o progCntr progCntr.v progCntr-tb.v
+vvp progCntr
+gtkwave progCntr.vpd
+ */
 module progCntr (Y, A, Clk, nReset, CountEn, Load);
 	input [7:0] A;
 	input Clk, nReset, CountEn, Load;
