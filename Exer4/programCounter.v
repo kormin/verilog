@@ -3,9 +3,9 @@
  * Description: Program Counter
  * Comments:
  * Script:
-iverilog -o progCntr progCntr.v progCntr-tb.v
-vvp progCntr
-gtkwave progCntr.vpd
+iverilog -o programCounter programCounter.v programCounter-tb.v
+vvp programCounter
+gtkwave programCounter.vpd
  */
 module progCntr (Y, A, Clk, nReset, CountEn, Load);
 	input [7:0] A;
