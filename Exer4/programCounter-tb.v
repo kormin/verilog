@@ -1,3 +1,12 @@
+/*
+ * Exercise: 4
+ * Description: Program Counter
+ * Comments:
+ * Script:
+iverilog -o programCounter programCounter.v programCounter-tb.v
+vvp programCounter
+gtkwave programCounter.vpd
+ */
 module tb_progCntr;
 	reg [7:0] A;
 	reg Clk, nReset, CountEn, Load;
