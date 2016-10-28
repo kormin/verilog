@@ -1,4 +1,12 @@
-// iverilog -o Ex4b Ex4b.v Ex4b-tb.v
+/*
+ * Exercise: 4
+ * Description: Registry Set
+ * Comments:
+ * Script:
+iverilog -o registrySet registrySet.v registrySet-tb.v
+vvp registrySet
+gtkwave registrySet.vpd
+ */
 module regset (Data_out, Clk, RW, Data_in, Address);
 	input Clk, RW;
 	input [3:0] Data_in;
