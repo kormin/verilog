@@ -1,3 +1,12 @@
+/*
+ * Exercise: 4
+ * Description: Registry Set
+ * Comments:
+ * Script:
+iverilog -o registrySet registrySet.v registrySet-tb.v
+vvp registrySet
+gtkwave registrySet.vpd
+ */
 module tb_regset;
 	reg Clk, RW;
 	reg [3:0] Data_in;
