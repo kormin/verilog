@@ -13,4 +13,16 @@ module accum (Y, CBF, A, Clk, nReset);
 	input Cin;
 	input [3:0] Mode;
 	wire Of;
+	// assign Y = alushifter as1(Res,Of,As,B,Cin,Mode);
+	
+	always @ (negedge Clk or negedge nReset)
+	begin
+		if(!nReset)
+			Y<=5'd0;
+		else
+			begin
+			Y<=A[4:1];
+			CBF<=A[0];
+			end
+	end
 endmodule
