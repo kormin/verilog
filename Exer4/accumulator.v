@@ -1,4 +1,12 @@
-// iverilog -o Ex4c Ex4c.v Ex4c-tb.v
+/*
+ * Exercise: 4
+ * Description: Accumulator
+ * Comments:
+ * Script:
+iverilog -o accumulator accumulator.v accumulator-tb.v
+vvp accumulator
+gtkwave accumulator.vpd
+ */
 module accum (Y, CBF, A, Clk, nReset);
 	input [4:0] A;
 	input Clk, nReset;
