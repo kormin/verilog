@@ -1,4 +1,12 @@
-// iverilog -o Ex4d Ex4d.v Ex4d-tb.v Ex4c.v Ex2c.v Ex2b.v Ex2a.v Ex1a.v Ex1b.v Ex1c.v Ex3b.v Ex3c.v
+/*
+ * Exercise: 4
+ * Description: Accumulator
+ * Comments:
+ * Script:
+iverilog -o accum5 accum5.v accum5-tb.v accumulator.v shifter.v alushifter.v alu.v comparator.v fulladder.v fouradder.v subtractor.v
+vvp accum5
+gtkwave accum5.vpd
+ */
 module accum5 (Res,Of,A,B,Cin,Mode, Clk, nReset);
 	input [3:0] A, B;
 	input Cin, Clk, nReset;
