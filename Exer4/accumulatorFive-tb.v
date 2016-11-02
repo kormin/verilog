@@ -61,6 +61,20 @@ module tb_accum5;
 			#5
 			a = 4'b0111; b = 4'b1100; m = 4'b0101; cin=0;
 			#5
+			//increment
+			a = 4'b1001; b = 4'b0001; m = 4'b0110; cin=0;
+			#5
+			a = 4'b1010; b = 4'b0101; m = 4'b0110; cin=0;
+			#5
+			a = 4'b0111; b = 4'b1100; m = 4'b0110; cin=0;
+			#5
+			//decrement
+			a = 4'b1001; b = 4'b0001; m = 4'b0111; cin=0;
+			#5
+			a = 4'b1010; b = 4'b0101; m = 4'b0111; cin=0;
+			#5
+			a = 4'b0111; b = 4'b1100; m = 4'b0111; cin=0;
+			#5
 		$finish;
 	end
 endmodule
