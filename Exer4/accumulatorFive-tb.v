@@ -47,6 +47,20 @@ module tb_accum5;
 			#5
 			a = 4'b0111; b = 4'b1100; m = 4'b0011; cin=0;
 			#5
+			//or
+			a = 4'b1001; b = 4'b0001; m = 4'b0100; cin=0;
+			#5
+			a = 4'b1010; b = 4'b0101; m = 4'b0100; cin=0;
+			#5
+			a = 4'b0111; b = 4'b1100; m = 4'b0100; cin=0;
+			#5
+			//complement
+			a = 4'b1001; b = 4'b0001; m = 4'b0101; cin=0;
+			#5
+			a = 4'b1010; b = 4'b0101; m = 4'b0101; cin=0;
+			#5
+			a = 4'b0111; b = 4'b1100; m = 4'b0101; cin=0;
+			#5
 		$finish;
 	end
 endmodule
