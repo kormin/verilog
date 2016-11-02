@@ -103,6 +103,20 @@ module tb_accum5;
 			#5
 			a = 4'b0111; b = 4'b0000; m = 4'b1011; cin=0;
 			#5
+			// shift left arithmetic
+			a = 4'b1001; b = 4'b0000; m = 4'b1100; cin=0;
+			#5
+			a = 4'b1010; b = 4'b0000; m = 4'b1100; cin=0;
+			#5
+			a = 4'b0111; b = 4'b0000; m = 4'b1100; cin=0;
+			#5
+			// shift right arithmetic
+			a = 4'b1001; b = 4'b0000; m = 4'b1101; cin=0;
+			#5
+			a = 4'b1010; b = 4'b0000; m = 4'b1101; cin=0;
+			#5
+			a = 4'b0111; b = 4'b0000; m = 4'b1101; cin=0;
+			#5
 		$finish;
 	end
 endmodule
