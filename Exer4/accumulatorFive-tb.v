@@ -229,6 +229,21 @@ module tb_accum5;
 			#5
 			a = 4'b0111; b = 4'b0000; m = 4'b1101; cin=0;
 			#5
+			// rotate left
+			a = 4'b1001; b = 4'b0000; m = 4'b1110; cin=0;
+			#5
+			a = 4'b1010; b = 4'b0000; m = 4'b1110; cin=0;
+			#5
+			a = 4'b0111; b = 4'b0000; m = 4'b1110; cin=0;
+			#5
+			// rotate right
+			a = 4'b1001; b = 4'b0000; m = 4'b1111; cin=0;
+			#5
+			a = 4'b1010; b = 4'b0000; m = 4'b1111; cin=0;
+			#5
+			a = 4'b0111; b = 4'b0000; m = 4'b1111; cin=0;
+			#5
+			
 		$finish;
 	end
 endmodule
