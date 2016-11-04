@@ -1,3 +1,12 @@
+/*
+ * Exercise: 4
+ * Description: Accumulator
+ * Comments:
+ * Script:
+iverilog -o accum5 accum5.v accum5-tb.v accumulator.v shifter.v alushifter.v alu.v comparator.v fulladder.v fouradder.v subtractor.v
+vvp accum5
+gtkwave accum5.vpd
+ */
 module tb_accum5;
 	// reg [4:0] A;
 	reg Clk, nReset;
